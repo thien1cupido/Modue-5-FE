@@ -1,0 +1,80 @@
+{
+  "orderList": [
+    {
+      "id": 1,
+      "name": "i phone 5",
+      "price": 1000,
+      "productTypeId": 1,
+      "date": "2023-12-12",
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "name": "Iphone 6",
+      "price": 1000,
+      "date": "2023-12-12",
+      "quantity": 2
+    },
+    {
+      "name": "Iphone 12",
+      "price": 2222,
+      "productTypeId": 1,
+      "date": "2023-07-07",
+      "quantity": 2,
+      "id": 3
+    },
+    {
+      "name": "Iphone 13",
+      "price": 2000,
+      "productTypeId": 1,
+      "date": "2023-07-14",
+      "quantity": 5,
+      "id": 4
+    },
+    {
+      "name": "Macbook Air M1",
+      "price": 10000,
+      "productTypeId": 2,
+      "date": "2023-07-05",
+      "quantity": 1,
+      "id": 5
+    },
+    {
+      "name": "Iphone 7",
+      "price": 500,
+      "productTypeId": 1,
+      "date": "2023-07-12",
+      "quantity": 1,
+      "id": 6
+    },
+    {
+      "name": "Iphone 12",
+      "price": 2000,
+      "date": "2023-07-13",
+      "quantity": 1,
+      "id": 7
+    }
+  ],
+  "productList": [
+    {
+      "id": 1,
+      "name": "Iphone 6",
+      "price": 2000
+    },
+    {
+      "id": 1,
+      "name": "Điện thoại",
+      "price": 2000
+    }
+  ],
+  "productType": [
+    {
+      "id": 1,
+      "name": "Điện thoại"
+    },
+    {
+      "id": 2,
+      "name": "Laptop"
+    }
+  ]
+}
