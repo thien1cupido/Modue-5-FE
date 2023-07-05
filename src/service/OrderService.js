@@ -1,5 +1,9 @@
 import axios from "axios";
 
+export async function updateOrder(param) {
+    
+}
+
 
 export const deleteOrder = async (id) => {
     try {
@@ -9,23 +13,12 @@ export const deleteOrder = async (id) => {
     }
 }
 
-//
-// export const findTop = () => {
-//     try {
-//         return axios.get("http://localhost:8080/productList?_sort=price&_sort=quantity&_order=desc");
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }
-//
-//
 export const save = async (values) => {
-    console.log(values)
-    // try {
-    //     await axios.post("http://localhost:8080/api/admin/order/create-order", values);
-    // } catch (e) {
-    //     console.log(e);
-    // }
+    try {
+        await axios.post("http://localhost:8080/api/admin/order/create-order", values);
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 export const findAll = async () => {
@@ -36,13 +29,11 @@ export const findAll = async () => {
         console.log(e)
     }
 }
-// export const findAllProductType = () => {
-//     return axios.get("http://localhost:8080/api/admin/order")
-// }
-// export const search = (value) => {
-//     try {
-//         return axios.get(`http://localhost:8080/api/admin/order?date=${value.nameSearch}&productTypeId=${value.productType}`)
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }
+export const findOrderById = async (id) => {
+    try {
+        const res = await axios.get("http://localhost:8080/api/admin/order/find-order?id="+id)
+        return res;
+    } catch (e) {
+        console.log(e)
+    }
+}

@@ -1,6 +1,6 @@
 import * as productService from '../service/OrderService';
 import React, {useEffect, useState} from "react";
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import {Field, Form, Formik} from "formik";
 import * as Swal from "sweetalert2";
 
@@ -105,14 +105,16 @@ export function OrderList() {
                             <tr key={index}>
                                 <td>{index + 1}</td>
                                 <td>{200 + o.idOrder}</td>
-                                <td>{o.product.name}</td>
+                                <td>{o.product.name || ''}</td>
                                 <td>{o.product.price}</td>
                                 <td>{o.product.productType.name}</td>
                                 <td>{o.date}</td>
                                 <td>{o.quantity}</td>
                                 <td>{o.totalMoney}</td>
                                 <td>
-                                    <button className="btn btn-warning">Sửa</button>
+                                    <NavLink to={`/update/${o?.idOrder}`}>
+                                        <button className="btn btn-warning">Sửa</button>
+                                    </NavLink>
                                     <button className="btn btn-danger ms-3" onClick={() => {
                                         sendInfoDelete(o.idOrder)
                                     }}>Xóa
